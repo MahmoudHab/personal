@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Fanwood+Text');
+
+:root {
+  --background-color: #fcfcfc;
+  --primary-text-color: #232323;
+  --secondary-text-color: #0033ff;
+  --text-hightlight: var(--primary-text-color);
+  --text-selection-color: var(--background-color);
+  --text-selection-bg: var(--text-hightlight);
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font: 16px/1.5 'Fanwood Text', serif;
+  color: var(--primary-text-color);
+  background: var(--background-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  position: relative;
+  color: var(--secondary-text-color);
+  
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+::selection {
+  text-shadow: none;
+  color: var(--text-selection-color);
+  background-color: var(--text-selection-bg);
+}
+
+::-moz-selection {
+  text-shadow: none;
+  color: var(--text-selection-color);
+  background-color: var(--text-selection-bg);
+}
+
+.main {
+  padding: 60px 10vw;
+
+  @media (min-width: 900px) {
+    padding: 100px;
+  }
+}
+
+.bio {
+  margin-bottom: 4ch;
+  max-width: 48ch;
+
+  p:first-child {
+    margin-top: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 900px) {
+    margin-bottom: 6ch;
+  }
+}
+
+.links {
+  font-size: 15px;
+  list-style: none;
+
+  li:not(:last-child) {
+    margin-bottom: 2px;
+  }
+}
